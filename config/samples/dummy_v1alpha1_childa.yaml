@@ -1,0 +1,6 @@
+apiVersion: dummy.example.com/v1alpha1
+kind: ChildA
+metadata:
+  name: default
+spec:
+  image: nginx

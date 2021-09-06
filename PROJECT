@@ -1,0 +1,31 @@
+domain: example.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: operator-tracing-poc
+repo: github.com/erkanerol/k8s-operator-tracing
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: dummy
+  kind: Head
+  path: github.com/erkanerol/k8s-operator-tracing/api/v1alpha1
+  version: v1alpha1
+  webhooks:
+    defaulting: true
+    webhookVersion: v1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: dummy
+  kind: ChildA
+  path: github.com/erkanerol/k8s-operator-tracing/api/v1alpha1
+  version: v1alpha1
+version: "3"

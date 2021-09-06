@@ -1,0 +1,6 @@
+apiVersion: dummy.example.com/v1alpha1
+kind: Head
+metadata:
+  name: default
+spec:
+  child_a: "quay.io/redhattraining/hello-world-nginx"

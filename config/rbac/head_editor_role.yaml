@@ -1,0 +1,24 @@
+# permissions for end users to edit heads.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: head-editor-role
+rules:
+- apiGroups:
+  - dummy.example.com
+  resources:
+  - heads
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - dummy.example.com
+  resources:
+  - heads/status
+  verbs:
+  - get
